@@ -1,0 +1,70 @@
+.newTask {
+    /* display: flex;
+    align-items: flex-start;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
+
+    background-color: var(--gray-500);
+    border-radius: 10px;
+    /* cursor: pointer; */
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.newTask .task {
+    color: white;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.newTask .task::-webkit-scrollbar {
+    width: 0.5rem; /* width of the entire scrollbar */
+    height: 0.3rem;
+}
+
+.newTask .task::-webkit-scrollbar-thumb {
+    background-color: var(--purpleDark); /* color of the scroll thumb */
+    border-radius: 1rem; /* roundness of the scroll thumb */
+}
+
+.newTask .trashIcon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.newTask .trashIcon img {
+    cursor: pointer;
+}
+
+.newTask .selecioado {
+    color: var(--gray-300);
+    text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    display: flex;
+    height: 20px;
+    width: 20px;
+    border-radius: 70px;
+    border: 2px solid var(--blue);
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--purpleDark);
+    border: none;
+}
+
+input[type="checkbox"]:checked::before {
+    content: "✓";
+    font-size: 0.6rem;
+    color: white;
+}
