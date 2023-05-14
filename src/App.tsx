@@ -64,7 +64,7 @@ function App() {
       }
 
       return task
-    })
+    }) 
 
     setFineshed(handleTask)
   }
